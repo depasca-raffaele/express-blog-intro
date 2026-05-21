@@ -39,7 +39,11 @@ app.get('/', (request, response) => {
     response
         .json('server del mio blog');
 })
-
+app.get('/bacheca', (request, response) => {
+    response.json({
+        posts: posts
+    });
+});
 
 
 app.listen(3000, (error) => {
